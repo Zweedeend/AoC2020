@@ -14,7 +14,7 @@ def part1():
     return sum(map(len, questions))
 
 
-print(Timer(part1, globals=dict(groups=groups, count=count)).autorange())
+print(part1())
 
 questions2 = [reduce(set.intersection, map(set, group.split())) for group in groups]
 print(sum(map(len, questions2)))

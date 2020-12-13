@@ -1,3 +1,4 @@
+#!/bin/env python3.8
 instructions = [(left, int(right)) for left, right in map(str.split, open("day8.txt"))]
 
 

@@ -1,5 +1,5 @@
 def parse(line):
-    trans = str.maketrans(dict(B="1", R="1", L="0", F="0"))
+    trans = str.maketrans("BRLF", "1100")
     return int(line.translate(trans), 2)
 seats = set(map(parse, open("day5.txt")))
 myseat = set(range(min(seats), max(seats))) - seats
